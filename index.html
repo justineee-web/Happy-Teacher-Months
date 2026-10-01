@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY TEACHER'S MONTH</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link sa External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <!-- INITIAL BUTTON -->
+        <div id="start-screen" class="start-screen">
+            <div class="envelope-icon">✉️</div>
+            <h2>HAPPY TEACHER'S MONTH</h2>
+            <p>Pindutin ang button sa ibaba para buksan ang sulat.</p>
+            <button class="open-btn" onclick="openCard()">✨ Click Me ✨</button>
+        </div>
+
+        <!-- HIDDEN CARD -->
+        <div id="card-content" class="card-content hidden">
+
+            <!-- Greeting Text -->
+            <h1 class="teacher-title">Happy Teacher's Day!</h1>
+            <p class="sweet-quote">"To the world you may be just a teacher, but to us you are a hero."</p>
+
+            <!-- Message Section -->
+            <div class="message-box">
+                <p>
+                    Maraming salamat po sa inyong walang sawang paggabay, pagmamahal, at pag-unawa sa amin araw-araw. 
+                    Kayo po ang aming inspirasyon upang magsumikap at matupad ang aming mga pangarap!
+                </p>
+            </div>
+
+            <!-- Audio Player Controls -->
+            <div class="audio-container">
+                <span class="audio-label">I Prepared A Song For You</span>
+                <!-- Naka-set ang src at naka-pause hangga't hindi pinipindot ng gagamit -->
+                <audio id="bg-music" controls src="Radiohead - No Surprises.mp3" preload="none"></audio>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function openCard() {
+            // Itago ang start screen
+            document.getElementById('start-screen').style.display = 'none';
+            
+            // Ipakita ang card content
+            var card = document.getElementById('card-content');
+            card.classList.remove('hidden');
+            card.classList.add('show-card');
+        }
+    </script>
+</body>
+</html>
